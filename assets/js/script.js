@@ -134,6 +134,16 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+form.onsubmit = function (e) {
+  let content = {
+    message: ''
+  }
+  for (let i = 0; i < formInputs.length; i++) {
+    content[formInputs[i].name] = formInputs[i].value;
+  }
+  window.open('mailto:%22Harsha%22%3clinkedin@harshobul.work%3e?subject=' + encodeURIComponent('Nice to meet you!') + '&body=' + encodeURIComponent(content['message']));
+  return false;
+}
 
 
 // page navigation variables
