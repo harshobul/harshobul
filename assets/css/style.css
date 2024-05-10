@@ -809,6 +809,22 @@ main {
   background: var(--jet);
 }
 
+.timeline-item.single::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -40px;
+  width: 1px;
+  height: calc(30px);
+  background: var(--jet);
+}
+
+@media (max-width: 579px) {
+  .timeline-item.single::before {
+    left: -30px;
+  }
+}
+
 .timeline-item::after {
   content: "";
   position: absolute;
